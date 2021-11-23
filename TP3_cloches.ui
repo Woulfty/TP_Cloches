@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>865</width>
+    <width>849</width>
     <height>458</height>
    </rect>
   </property>
@@ -35,7 +35,7 @@
 background-color: rgb(230, 230, 230);</string>
     </property>
     <property name="title">
-     <string>Connxion / Déconnexion au serveur</string>
+     <string>Connexion / Déconnexion au serveur</string>
     </property>
     <widget class="QPushButton" name="Connect">
      <property name="geometry">
@@ -100,11 +100,14 @@ background-color: rgb(230, 230, 230);</string>
     <widget class="QLineEdit" name="Server_Edit">
      <property name="geometry">
       <rect>
-       <x>134</x>
-       <y>60</y>
+       <x>130</x>
+       <y>70</y>
        <width>113</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="text">
+      <string>192.168.64.124</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="Port_Edit">
@@ -116,12 +119,15 @@ background-color: rgb(230, 230, 230);</string>
        <height>20</height>
       </rect>
      </property>
+     <property name="text">
+      <string>502</string>
+     </property>
     </widget>
     <widget class="QLabel" name="Server_Label">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>60</y>
+       <x>46</x>
+       <y>70</y>
        <width>81</width>
        <height>21</height>
       </rect>
@@ -163,6 +169,184 @@ background-color: rgb(230, 230, 230);</string>
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
+    <widget class="QLabel" name="Qlabeltext">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>État serveur : </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="etatServeur">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Not Connected !</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>30</y>
+      <width>361</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);
+background-color: rgb(230, 230, 230);</string>
+    </property>
+    <property name="title">
+     <string>Gestion Cloches</string>
+    </property>
+    <widget class="QPushButton" name="Cloche1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>180</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cloche n°1</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Cloche3">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>230</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cloche n°3</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Cloche4">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>230</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cloche n°4</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Cloche2">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>180</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cloche n°2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Reset">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>280</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="serverMessage">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>321</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -170,7 +354,7 @@ background-color: rgb(230, 230, 230);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>865</width>
+     <width>849</width>
      <height>21</height>
     </rect>
    </property>
@@ -189,5 +373,144 @@ background-color: rgb(230, 230, 230);</string>
  <resources>
   <include location="TP3_cloches.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Connect</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>connect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>432</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Disconnect</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>disconnect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>432</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Quit</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>quit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>432</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cloche1</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>Cloche1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cloche2</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>Cloche2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>700</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cloche3</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>Cloche3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cloche4</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>Cloche4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>700</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Reset</sender>
+   <signal>clicked()</signal>
+   <receiver>TP3_clochesClass</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>630</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>quit()</slot>
+  <slot>connect()</slot>
+  <slot>disconnect()</slot>
+  <slot>Cloche1()</slot>
+  <slot>reset()</slot>
+  <slot>Cloche2()</slot>
+  <slot>Cloche3()</slot>
+  <slot>Cloche4()</slot>
+ </slots>
 </ui>

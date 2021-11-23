@@ -27,7 +27,7 @@ public slots:
 
 private:
     Ui::TP3_clochesClass ui;
-	QTcpSocket _socket;
+	QTcpSocket *socket;
 
 
 	bool serverConnected = 0;

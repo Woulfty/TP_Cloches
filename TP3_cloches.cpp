@@ -7,7 +7,7 @@ TP3_cloches::TP3_cloches(QWidget *parent)
     ui.setupUi(this);
 	ui.Disconnect->setDisabled(1);
 
-	_socket.connectToHost(QHostAddress("192.168.64.124"), 502);
+	socket = new QTcpSocket(this);
 }
 
 
@@ -29,14 +29,18 @@ void TP3_cloches::sendMessage(QString Msg)
 // - établit la conexion au serveur
 void TP3_cloches::connect()
 {
-	{
-		// Si le serveur a été démarré correctement
-		ui.etatServeur->setText(tr("Connected !"));
-		ui.etatServeur->setStyleSheet("QLabel { color : green; }");
+	QString IP = ui.Server_Edit->text();
+	QString QHost = ui.Port_Edit->text();
+	int Host = QHost.toInt();
 
-		ui.Disconnect->setDisabled(0);
-		ui.Connect->setDisabled(1);
-	}
+	socket->connectToHost(IP, Host);
+
+	// Si le serveur a été démarré correctement
+	ui.etatServeur->setText(tr("Connected !"));
+	ui.etatServeur->setStyleSheet("QLabel { color : green; }");
+
+	ui.Disconnect->setDisabled(0);
+	ui.Connect->setDisabled(1);
 }
 
 // - déconnecte du serveur
@@ -45,7 +49,7 @@ void TP3_cloches::disconnect()
 	// Si le serveur n'a pas été démarré correctement
 	ui.etatServeur->setText(tr("Not Connected !"));
 	ui.etatServeur->setStyleSheet("QLabel { color : red; }");
-	_socket.close();
+	socket->close();
 
 	ui.Disconnect->setDisabled(1);
 	ui.Connect->setDisabled(0);

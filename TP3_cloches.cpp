@@ -7,8 +7,14 @@ TP3_cloches::TP3_cloches(QWidget *parent)
 {
     ui.setupUi(this);
 	ui.Disconnect->setDisabled(1);
+	ui.Cloche1->setDisabled(1);
+	ui.Cloche2->setDisabled(1);
+	ui.Cloche3->setDisabled(1);
+	ui.Cloche4->setDisabled(1);
+
 
 	socket = new QTcpSocket(this);
+
 }
 
 
@@ -21,9 +27,7 @@ void TP3_cloches::quit()
 
 void TP3_cloches::sendMessage(QString Msg)
 {
-	QMessageBox::information(this, "Médlusettes", "Médlusettes");
-	QTableWidgetItem *msg = new QTableWidgetItem(Msg);
-	ui.serverMessage->setItem(msgCount++, 0, msg);
+	ui.MsgBox->setText(Msg);
 }
 
 
@@ -42,6 +46,12 @@ void TP3_cloches::connect()
 
 	ui.Disconnect->setDisabled(0);
 	ui.Connect->setDisabled(1);
+
+	ui.Cloche1->setDisabled(0);
+	ui.Cloche2->setDisabled(0);
+	ui.Cloche3->setDisabled(0);
+	ui.Cloche4->setDisabled(0);
+
 }
 
 // - déconnecte du serveur
@@ -54,11 +64,33 @@ void TP3_cloches::disconnect()
 
 	ui.Disconnect->setDisabled(1);
 	ui.Connect->setDisabled(0);
+
+	ui.Cloche1->setDisabled(1);
+	ui.Cloche2->setDisabled(1);
+	ui.Cloche3->setDisabled(1);
+	ui.Cloche4->setDisabled(1);
+
 }
 
 // - reset le marteau des cloches
 void TP3_cloches::reset()
 {
+	char trame[12];
+
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x00;
+
+	socket->write(trame, 12);
 }
 
 
@@ -68,9 +100,9 @@ void TP3_cloches::reset()
 // - Fait sonner la cloche n°1
 void TP3_cloches::Cloche1()
 {
-	QString msg = "Envoie de trame à la cloche n°1 ( grosse cloche )";
+	 QString msg = "Cloche 1 ( grosse cloche )";
 	sendMessage(msg);
-
+	
 	char trame[12];
 
 	trame[0] = 0x00;
@@ -111,7 +143,7 @@ void TP3_cloches::Cloche1()
 // - Fait sonner la cloche n°2
 void TP3_cloches::Cloche2()
 {
-	QString msg = "Envoie de trame à la cloche n°2 ( moyenne cloche )";
+	QString msg = "Cloche 2 ( cloche moyenne )";
 	sendMessage(msg);
 
 	char trame[12];
@@ -153,7 +185,7 @@ void TP3_cloches::Cloche2()
 // - Fait sonner la cloche n°3
 void TP3_cloches::Cloche3()
 {
-	QString msg = "Envoie de trame à la cloche n°3 ( petite cloche )";
+	QString msg = "Cloche 3 ( petite cloche )";
 	sendMessage(msg);
 
 	char trame[12];
@@ -196,7 +228,7 @@ void TP3_cloches::Cloche3()
 // - Fait sonner la cloche n°4
 void TP3_cloches::Cloche4()
 {
-	QString msg = "Envoie de trame à la cloche n°4 ( Cloche intermédiaire )";
+	QString msg = "Cloche 4 ( Cloche intermediaire )";
 	sendMessage(msg);
 
 	char trame[12];

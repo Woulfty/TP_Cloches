@@ -29,7 +29,6 @@ private:
     Ui::TP3_clochesClass ui;
 	QTcpSocket *socket;
 
-
 	bool serverConnected = 0;
 	int msgCount = 0;
 };

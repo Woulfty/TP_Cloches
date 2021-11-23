@@ -1,5 +1,6 @@
 #include "TP3_cloches.h"
 #include "qmessagebox.h"
+#include <Windows.h>
 
 TP3_cloches::TP3_cloches(QWidget *parent)
     : QMainWindow(parent)
@@ -60,30 +61,176 @@ void TP3_cloches::reset()
 {
 }
 
+
+// ----------------------------------------------------------- //
+
+
 // - Fait sonner la cloche n°1
 void TP3_cloches::Cloche1()
 {
-	QString msg = "Envoie de trame à la cloche n°1";
+	QString msg = "Envoie de trame à la cloche n°1 ( grosse cloche )";
 	sendMessage(msg);
+
+	char trame[12];
+
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x01;
+
+	socket->write(trame, 12);
+
+
+	Sleep(250);
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x00;
+
+	socket->write(trame, 12);
+	//---------------------------------------------------------------------------
 }
+
 
 // - Fait sonner la cloche n°2
 void TP3_cloches::Cloche2()
 {
-	QString msg = "Envoie de trame à la cloche n°2";
+	QString msg = "Envoie de trame à la cloche n°2 ( moyenne cloche )";
 	sendMessage(msg);
+
+	char trame[12];
+
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x02;
+
+	socket->write(trame, 12);
+
+
+	Sleep(250);
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x00;
+
+	socket->write(trame, 12);
+	//---------------------------------------------------------------------------
 }
 
 // - Fait sonner la cloche n°3
 void TP3_cloches::Cloche3()
 {
-	QString msg = "Envoie de trame à la cloche n°3";
+	QString msg = "Envoie de trame à la cloche n°3 ( petite cloche )";
 	sendMessage(msg);
+
+	char trame[12];
+
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x04;
+
+	socket->write(trame, 12);
+
+
+	Sleep(250);
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x00;
+
+	socket->write(trame, 12);
+	//---------------------------------------------------------------------------
 }
+
 
 // - Fait sonner la cloche n°4
 void TP3_cloches::Cloche4()
 {
-	QString msg = "Envoie de trame à la cloche n°4";
+	QString msg = "Envoie de trame à la cloche n°4 ( Cloche intermédiaire )";
 	sendMessage(msg);
-}
+
+	char trame[12];
+
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x08;
+
+	socket->write(trame, 12);
+	
+	
+	Sleep(250);
+	trame[0] = 0x00;
+	trame[1] = 0x00;
+	trame[2] = 0x00;
+	trame[3] = 0x00;
+	trame[4] = 0x00;
+	trame[5] = 0x06;
+	trame[6] = 0x00;
+	trame[7] = 0x06;
+	trame[8] = 0x00;
+	trame[9] = 0x02;
+	trame[10] = 0x00;
+	trame[11] = 0x00;
+
+	socket->write(trame, 12);
+	//---------------------------------------------------------------------------
+} 

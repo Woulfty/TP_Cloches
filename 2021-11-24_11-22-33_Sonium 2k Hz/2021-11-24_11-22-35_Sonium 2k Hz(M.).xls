@@ -1,0 +1,26 @@
+Fichier:	C:\Users\formation\Desktop\2021-11-24_11-22-33_Sonium 2k Hz\2021-11-24_11-22-35_Sonium 2k Hz(M.).xls
+
+PARAMETRES:
+Debut de la capture :	11:22:35	24/11/2021
+Fin de la capture :	11:22:39	24/11/2021
+Duree de la capture :	00:00:04
+Echantillonage(sec) :	60,000000
+Frequence(Hz) :	48000
+
+CALIBRATION:
+	Heure	Sensibilite	Frequence (Hz)	Leq (dB)
+Debut d'acquisition :	-	13,200000	-	-
+Fin d'acquisition :	-	-	-	-
+
+CAPTURE	Lineaire	Ponderation A	Ponderation C
+Leq :	94,46	95,70	94,25
+Leq min :	86,89	88,12	86,67
+Leq max :	95,52	96,77	95,31
+L10 :	95,53	96,76
+L50 :	95,52	96,76
+L90 :	86,89	88,12
+					SPECTRE :	25(Hz)	32(Hz)	40(Hz)	50(Hz)	63(Hz)	80(Hz)	100(Hz)	125(Hz)	160(Hz)	200(Hz)	250(Hz)	315(Hz)	400(Hz)	500(Hz)	630(Hz)	800(Hz)	1000(Hz)	1250(Hz)	1600(Hz)	2000(Hz)	2500(Hz)	3150(Hz)	4000(Hz)	5000(Hz)	6000(Hz)	8000(Hz)	10000(Hz)	12500(Hz)	16000(Hz)	20000(Hz)
+						37,40	34,90	28,70	36,77	31,51	39,30	40,64	48,06	40,71	43,64	41,68	43,06	51,42	44,35	43,55	41,41	44,18	46,13	52,76	94,45	60,82	51,34	60,08	50,19	52,28	48,07	46,29	37,41	35,73	35,21
+                                                                                                    
+DATA:
+Horodatage	Leq	Leq(A)	L10(A)	L50(A)	L90(A)	25(Hz)	32(Hz)	40(Hz)	50(Hz)	63(Hz)	80(Hz)	100(Hz)	125(Hz)	160(Hz)	200(Hz)	250(Hz)	315(Hz)	400(Hz)	500(Hz)	630(Hz)	800(Hz)	1000(Hz)	1250(Hz)	1600(Hz)	2000(Hz)	2500(Hz)	3150(Hz)	4000(Hz)	5000(Hz)	6000(Hz)	8000(Hz)	10000(Hz)	12500(Hz)	16000(Hz)	20000(Hz)
